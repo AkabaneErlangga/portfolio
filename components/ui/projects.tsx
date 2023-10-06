@@ -3,6 +3,7 @@ import Image from "next/image";
 import project1 from "@/public/project1.png"
 import project2 from "@/public/project2.png"
 import project3 from "@/public/project3.jpg"
+import project4 from "@/public/project4.png"
 import { GithubIcon, ArrowUpRightSquareIcon } from "lucide-react";
 import { Button } from "./button";
 import { Badge } from "./badge";
@@ -10,7 +11,7 @@ import Link from "next/link";
 
 const ProjectsSection = () => {
   return (
-    <div className="h-screen snap-start" id="projects">
+    <div className="min-h-screen snap-start" id="projects">
       <div className="flex items-center p-6 space-x-3">
         <p className="text-lg font-semibold">Projects</p>
         <hr style={{
@@ -80,8 +81,8 @@ const ProjectsSection = () => {
           <h4 className="text-lg font-semibold">BangOrder</h4>
           <p>Sebuah platform untuk pemesanan di restoran. Aplikasi web digunakan oleh restoran untuk mengatur makanan dan minuman, menerima pesanan dan mengatur keuangan.</p>
           <div className="flex items-start w-full space-x-1">
-            <Badge variant="secondary">Next</Badge>
-            <Badge variant="secondary">Tailwind</Badge>
+            <Badge variant="secondary">React</Badge>
+            <Badge variant="secondary">MaterialUi</Badge>
           </div>
           <div className="flex items-center justify-end w-full space-x-1">
             <Button variant="ghost" size="icon">
@@ -89,6 +90,19 @@ const ProjectsSection = () => {
                 <GithubIcon />
               </Link>
             </Button>
+          </div>
+        </div>
+
+        <div className="flex flex-col p-6 rounded-lg items-center space-y-3 bg-stone-800">
+          <Image
+            src={project4}
+            alt="project4"
+          />
+          <h4 className="text-lg font-semibold">STEVIA</h4>
+          <p>Sebuah platform untuk memonitor serangan internet yang terdeteksi. web akan menampilkan arah serangan dan jenis serangan yang terjadi.</p>
+          <div className="flex items-start w-full space-x-1">
+            <Badge variant="secondary">React</Badge>
+            <Badge variant="secondary">NodeJs</Badge>
           </div>
         </div>
       </div>
